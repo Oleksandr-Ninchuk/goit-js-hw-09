@@ -1,18 +1,80 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 20px 24px;
+  justify-content: center;
+  list-style: none;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.gallery-item {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.gallery-link {
+  display: block;
+  text-decoration: none;
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: none;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border-color: #666;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+}
+
+.feedback-form button {
+  font-size: 16px;
+  color: #fff;
+  background-color: #4e75ff;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #6c8cff;
+}
